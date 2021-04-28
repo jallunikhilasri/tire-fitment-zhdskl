@@ -1,0 +1,53 @@
+.body {
+  /* padding: 13px 15px 13px 15px; */
+  padding: 13px 200px 13px 179px;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 6px -2px #999 !important;
+  background-color: darkseagreen;
+  color: whitesmoke;
+  height: 400px;
+  width: 400px;
+  overflow: auto;
+  margin: 0 370px;
+}
+.tp-button {
+  background-color: #007eb4;
+  border-color: #007eb4;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0 500px;
+}
+.container {
+  margin-left: 80px;
+}
+.message {
+  margin-left: 60px;
+}
+.divStyle {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+.btnStyle {
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 12px;
+  flex: 0 1 20%;
+  border: none;
+  font-size: 1rem;
+  padding: 8px;
+  color: #007eb4;
+  cursor: pointer;
+  text-align: center;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+.header {
+  margin: 10px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: grey;
+}

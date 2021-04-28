@@ -1,0 +1,74 @@
+<h1 style="margin: 0 500px;">Shop Tires Online</h1>
+<br>
+<button *ngIf="btnFlag" class="tp-button" (click)="getYearsData()">Find Tires For My Vehicle</button>
+
+<div *ngIf="!btnFlag">
+  <a (click)="closeAll()" style="color: blue !important;margin: 0 366px;">START OVER</a>
+</div>
+<br /><br />
+
+
+<div class="body" *ngIf="yearFlag">
+  <h3 class="container">What year is your vehicle?</h3>
+  <br />
+  <span class="header" style="color:white !important;">YEAR </span>
+  <span class="header">MAKE </span>
+  <span class="header">MODEL </span>
+  <span class="header">STYLE </span><br /><br />
+  <span class="divStyle" *ngFor="let item of yearData">
+    <button class="btnStyle" data-action="hover,click" (click)="getMakeData(item)">{{item}}</button>
+  </span>
+</div>
+
+<div class="card" *ngIf="makeFlag">
+  <h3 class="container">Select a Make</h3>
+  <br />
+  <span class="header" style="color:blue !important;">YEAR </span>
+  <span class="header" style="color:white !important;">MAKE </span>
+  <span class="header">MODEL </span>
+  <span class="header">STYLE </span><br /><br />
+  <div class="message">Vehicle: {{yearValue}} {{makeValue}} {{modelValue}} {{styleValue}}</div>
+  <br />
+  <span class="divStyle" *ngFor="let item of makeData">
+    <button class="btnStyle" (click)="getModelData(item)">{{item}}</button>
+  </span>
+</div>
+
+<div class="card" *ngIf="modelFlag">
+  <h3 class="container">Select a Model</h3>
+  <br />
+  <span class="header" style="color:blue !important;">YEAR </span>
+  <span class="header" style="color:blue !important;">MAKE </span>
+  <span class="header" style="color:white !important;">MODEL </span>
+  <span class="header">STYLE </span><br /><br />
+  <div class="message">Vehicle: {{yearValue}} ,{{makeValue}} {{modelValue}} {{styleValue}}</div>
+  <br />
+  <span class="divStyle" *ngFor="let item of modelsData">
+    <button class="btnStyle" (click)="getStyleData(item)">{{item}}</button>
+  </span>
+</div>
+
+<div class="card" *ngIf="styleFlag">
+  <h3 class="container">Select a Style</h3>
+  <br />
+  <span class="header" style="color:blue !important;">YEAR </span>
+  <span class="header" style="color:blue !important;">MAKE </span>
+  <span class="header" style="color:blue !important;">MODEL </span>
+  <span class="header" style="color:white !important;">STYLE </span><br /><br />
+  <div class="message">Vehicle: {{yearValue}} ,{{makeValue}}, {{modelValue}} {{styleValue}}</div>
+  <br />
+  <span class="divStyle" *ngFor="let item of stylesData">
+    <button class="btnStyle" (click)="getSelectedData(item)">{{item}}</button>
+  </span>
+</div>
+
+<div class="card" *ngIf="finalFlag">
+  <h3 class="container">Confirm your dealer Location</h3>
+  <br />
+  <span class="header" style="color:blue !important;">YEAR </span>
+  <span class="header" style="color:blue !important;">MAKE </span>
+  <span class="header" style="color:blue !important;">MODEL </span>
+  <span class="header" style="color:blue !important;">STYLE </span><br /><br />
+  <div class="message">Vehicle: {{yearValue}}, {{makeValue}}, {{modelValue}}, {{styleValue}}</div>
+  <br />
+</div>
